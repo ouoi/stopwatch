@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height">
+
+	<title>Stop Watch</title>
+	<meta name="description" content="Stop Watch & 카운트 다운">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Stop Watch">
+	<meta property="og:description" content="Stop Watch & 카운트 다운">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<label>기능 선택</label>
+		<select id="select_function">
+			<option value="stopwatch">Stop Watch</option>
+			<option value="countdown">카운트 다운</option>
+		</select>
+	</header>
+	
+	<section id="content" class="stopwatch">
+		<h1 class="sw title">Stop Watch</h1>
+		<h1 class="cd title">카운트 다운</h1>
+
+		<div class="time">00:00:00.00</div>
+
+		<div class="cd input_sec">
+			<input type="number" class="form-control" value="0" max="86400" min="0"/> <label>초</label>
+		</div>
+
+		<div class="btn_box">
+			<button class="btn btn-primary btn_start">시작</button>
+			<button class="btn btn-warning btn_pause">일시정지</button>
+			<button class="btn btn-info btn_record sw">기록</button>
+			<button class="btn btn-danger btn_reset">리셋</button>
+		</div>
+
+		<ul class="record_list sw"></ul>
+	</section>
+
+	<script type="text/javascript" src="./js/time.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/stopwatch.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/countdown.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./js/main.js" charset="utf-8"></script>
+</body>
+</html>
